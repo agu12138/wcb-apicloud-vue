@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="maximum-scale=1,minimum-scale=1,user-scalable=0,width=device-width,initial-scale=1"><meta name="format-detection" content="telephone=no,email=no,date=no,address=no"><link href="./css/common.d8e55e47b30c82d3e416.css" rel="stylesheet"></head><body><div id="app"></div><script type="text/javascript" src="./js/vendor.chunk.js"></script><script type="text/javascript" src="./js/common.chunk.js"></script></body><script type="text/javascript">(function () {
+        var search = window.location.search;
+        var request = {};
+        var arr = search.replace("?", "").split("&");
+        for (var i = 0; i < arr.length; i++) {
+            var s = arr[i].split("=");
+            request[s[0]] = s[1];
+        }
+        if (request.url) {
+            var script = document.createElement("script");
+            script.src = "./js/" + request.url + ".js";
+            document.body.appendChild(script);
+        }
+        window.request = request;
+    })()</script></html>
